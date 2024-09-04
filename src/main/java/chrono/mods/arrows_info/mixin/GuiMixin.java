@@ -1,10 +1,9 @@
-package chrono.mods.arrows.mixin;
+package chrono.mods.arrows_info.mixin;
 
-import chrono.mods.arrows.config.ArrowsConfig;
+import chrono.mods.arrows_info.config.ArrowsConfig;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.DeltaTracker;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.resources.ResourceLocation;
@@ -24,9 +23,6 @@ public abstract class GuiMixin {
   @Shadow
   @Final
   private static ResourceLocation HOTBAR_OFFHAND_LEFT_SPRITE, HOTBAR_OFFHAND_RIGHT_SPRITE;
-  @Shadow
-  @Final
-  private Minecraft minecraft;
 
   @Shadow
   private Player getCameraPlayer() {
