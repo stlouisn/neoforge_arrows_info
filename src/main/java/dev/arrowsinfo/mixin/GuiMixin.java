@@ -1,6 +1,6 @@
-package chrono.mods.arrows_info.mixin;
+package dev.arrowsinfo.mixin;
 
-import chrono.mods.arrows_info.config.ArrowsConfig;
+import dev.arrowsinfo.Constants;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.DeltaTracker;
@@ -46,21 +46,21 @@ public abstract class GuiMixin {
     if (arrows.isEmpty() || arrows == offHandStack) {
       return;
     }
-    ArrowsConfig.Placement placement = ArrowsConfig.placement;
+    Constants.Placement placement = Constants.placement;
     HumanoidArm arm = player.getMainArm();
-    if (placement == ArrowsConfig.Placement.OFFHAND) {
+    if (placement == Constants.Placement.OFFHAND) {
       arm = arm.getOpposite();
     }
     int x;
     if (arm == HumanoidArm.LEFT) {
       x = guiGraphics.guiWidth() / 2 - 91 - 29;
-      if (placement == ArrowsConfig.Placement.OFFHAND && !offHandStack.isEmpty()) {
+      if (placement == Constants.Placement.OFFHAND && !offHandStack.isEmpty()) {
         x -= 23;
       }
     }
     else {
       x = guiGraphics.guiWidth() / 2 + 91;
-      if (placement == ArrowsConfig.Placement.OFFHAND && !offHandStack.isEmpty()) {
+      if (placement == Constants.Placement.OFFHAND && !offHandStack.isEmpty()) {
         x += 23;
       }
     }

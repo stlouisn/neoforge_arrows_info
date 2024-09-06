@@ -1,9 +1,10 @@
-package chrono.mods.arrows_info.config;
+package dev.arrowsinfo;
 
-public class ArrowsConfig {
+public class Constants {
+
+  public static final String MOD_ID = "arrowsinfo";
 
   public static Placement placement = Placement.OFFHAND;
 
-  @SuppressWarnings("unused")
   public enum Placement {OFFHAND, MAINHAND}
 }

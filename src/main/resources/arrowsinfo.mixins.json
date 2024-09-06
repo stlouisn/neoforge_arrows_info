@@ -5,7 +5,7 @@
   "minVersion": "0.8.5",
   "client": [
     "GuiMixin"
-  ]
+  ],
   "injectors": {
     "defaultRequire": 1
   }
