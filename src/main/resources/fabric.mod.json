@@ -17,7 +17,7 @@
   "environment": "${mod_fabric_environment}",
   "entrypoints": {
     "client": [
-      "chrono.mods.arrows_info.Arrows"
+      "${maven_group}.${maven_entrypoint}"
     ]
   },
   "mixins": [
@@ -33,7 +33,7 @@
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.curseforge": "${url_curseforge}"
+        "modmenu.homepage": "${url_homepage}"
       }
     }
   }
