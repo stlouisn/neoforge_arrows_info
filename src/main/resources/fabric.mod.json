@@ -9,15 +9,15 @@
   ],
   "contact": {
     "homepage": "${url_homepage}",
-    "sources": "${url_sources}",
-    "issues": "${url_issues}"
+    "sources": "${git_sources}",
+    "issues": "${git_issues}"
   },
   "license": "${mod_license}",
   "icon": "assets/${mod_id}/icon.png",
-  "environment": "${mod_fabric_environment}",
+  "environment": "${mod_environment}",
   "entrypoints": {
     "client": [
-      "${maven_group}.${maven_entrypoint}"
+      "dev.arrowsinfo.ArrowsInfo"
     ]
   },
   "mixins": [
@@ -33,7 +33,7 @@
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.homepage": "${url_homepage}"
+        "modmenu.${url_type}": "${url_homepage}"
       }
     }
   }
