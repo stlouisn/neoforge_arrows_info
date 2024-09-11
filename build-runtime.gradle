@@ -1,2 +1,5 @@
 / Raised /
 dependencies { modLocalRuntime files ( "/../../Mods/raised-neoforge-1.21-4.0.0.jar" ) }
+
+/ Spark /
+dependencies { modLocalRuntime files ( "/../../Mods/spark-1.10.97-neoforge.jar" ) }
