@@ -1,0 +1,2 @@
+/ Raised /
+dependencies { modLocalRuntime files ( "/../../Mods/raised-neoforge-1.21-4.0.0.jar" ) }

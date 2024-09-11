@@ -1,8 +1,7 @@
 package dev.arrowsinfo.mixin;
 
-import dev.arrowsinfo.Constants;
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.fabricmc.loader.api.FabricLoader;
+import dev.arrowsinfo.Constants;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphics;
@@ -65,9 +64,6 @@ public abstract class GuiMixin {
       }
     }
     int y = guiGraphics.guiHeight() - 23;
-    if (FabricLoader.getInstance().getObjectShare().get("raised:hud") instanceof Integer distance) {
-      y -= distance;
-    }
     RenderSystem.defaultBlendFunc();
     RenderSystem.enableBlend();
     guiGraphics.pose().pushPose();
