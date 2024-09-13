@@ -1,6 +1,6 @@
-package dev.arrowsinfo;
+package dev.arrowsinfo.utils;
 
-public final class Constants {
+public final class ModConstants {
 
   public static final String MOD_ID = "arrowsinfo";
 

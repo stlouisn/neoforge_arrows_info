@@ -1,7 +1,7 @@
 package dev.arrowsinfo.mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import dev.arrowsinfo.Constants;
+import dev.arrowsinfo.utils.ModConstants;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphics;
@@ -45,21 +45,21 @@ public abstract class GuiMixin {
     if (arrows.isEmpty() || arrows == offHandStack) {
       return;
     }
-    Constants.Placement placement = Constants.placement;
+    ModConstants.Placement placement = ModConstants.placement;
     HumanoidArm arm = player.getMainArm();
-    if (placement == Constants.Placement.OFFHAND) {
+    if (placement == ModConstants.Placement.OFFHAND) {
       arm = arm.getOpposite();
     }
     int x;
     if (arm == HumanoidArm.LEFT) {
       x = guiGraphics.guiWidth() / 2 - 91 - 29;
-      if (placement == Constants.Placement.OFFHAND && !offHandStack.isEmpty()) {
+      if (placement == ModConstants.Placement.OFFHAND && !offHandStack.isEmpty()) {
         x -= 23;
       }
     }
     else {
       x = guiGraphics.guiWidth() / 2 + 91;
-      if (placement == Constants.Placement.OFFHAND && !offHandStack.isEmpty()) {
+      if (placement == ModConstants.Placement.OFFHAND && !offHandStack.isEmpty()) {
         x += 23;
       }
     }
