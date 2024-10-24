@@ -77,7 +77,6 @@ public abstract class GuiMixin {
     }
     guiGraphics.pose().popPose();
     if (arm == HumanoidArm.LEFT) {
-
       this.renderSlot(guiGraphics, x + 3, y + 4, deltaTracker, player, arrows, 1);
     }
     else {
